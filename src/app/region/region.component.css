@@ -1,0 +1,10 @@
+.card{
+    border : 2px 2px 2px 2px;
+    background-color: brown;
+    margin-bottom: 7px;
+}
+
+.z{
+    color: rgb(128, 0, 0);
+    background-color: rgb(26, 161, 173);
+}

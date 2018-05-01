@@ -1,0 +1,48 @@
+<div>
+  <div>
+    <div *ngFor='let x of regions'>
+      <a>
+        <button (click)='getCountryList(x)'>{{x}}</button>
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <div class="card" style="width: 18rem;" *ngFor='let r of regions2'>
+      <!--<button (click)="getFlag(r.alpha3Code)">-->
+      <img class="card-img-top" src="" alt="Card image cap">
+      <svg></svg>
+      <div class="card-body">
+        <h5 class="card-title">the country name inside region is {{r.name | uppercase}}</h5>
+        <p class="card-text" >
+          The capital is {{r.capital}}<br>
+          The timezone(s) is/are {{r.timezones}}
+        </p>
+        <button (click)="getCurrency(r.currencies[0].code)"><p>{{r.currencies[0].name}} having code  {{r.currencies[0].code}}</p> </button>
+        <button (click)="goBack()">Go Back  </button>
+        <button (click)='getDetails(r)'>See Details</button>
+        
+          
+      </div>
+      <!--</button>-->
+    </div>
+  </div>
+  
+</div>
+
+<div *ngIf="g>0">
+  <div class="card z" style="width: 18rem;" > <!--<a [routerLink]='['/country']'></a>-->
+    <button (click)="goBack()">Go Back  </button>
+      <img class="card-img-top" src="" alt="Card image cap"><svg ></svg>
+    <div class="card-body">
+      <h5 class="card-title ">the country name is {{l.name}}</h5>
+      <p class="card-text"> and details are: capital {{l.capital}}, area is {{l.area}}, demonym is {{l.demonym}},population is {{l.population}}
+        </p>
+    </div>
+  </div>
+
+ 
+   
+</div>
+<div  class="z" *ngFor='let p of z'>all countries having the same currency are {{p.name}}
+</div>
